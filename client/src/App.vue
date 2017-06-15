@@ -8,16 +8,23 @@
 </template>
 
 <script>
-import Navbar from '@/components/navbar'
+import Navbar from '@/components/Navbar'
 
-import {mapGetters, mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 export default {
   name: 'app',
   components: {
     Navbar
   },
   methods: {
-    ...mapActions([])
+    ...mapActions([
+      'checkTokenfromLocalStorage',
+      'fetchArticles'
+    ])
+  },
+  created() {
+    this.checkTokenfromLocalStorage()
+    this.fetchArticles()
   }
 }
 </script>

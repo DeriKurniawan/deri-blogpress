@@ -17,9 +17,11 @@
 
   export default{
     data() {
-      userForm: {
-        username: '',
-        password: ''
+      return {
+        userForm: {
+          username: '',
+          password: ''
+        }
       }
     },
     methods: {

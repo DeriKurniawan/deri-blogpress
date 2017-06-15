@@ -22,7 +22,7 @@
 <script type="text/javascript">
   import {mapActions} from 'vuex'
 
-  exports.default{
+  export default {
     data () {
       return {
         userForm: {
