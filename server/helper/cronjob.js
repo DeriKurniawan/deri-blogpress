@@ -61,6 +61,5 @@ module.exports = {
         done();
       }
     }, null, true, 'Asia/Jakarta')
-
   }
 }
