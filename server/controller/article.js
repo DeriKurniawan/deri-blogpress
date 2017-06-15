@@ -2,11 +2,11 @@ const Article = require('../models/article');
 var models = {}
 
 models.index = function(req, res){
-  Article.find({}, (err, article)=>{
+  Article.find({}, (err, articles)=>{
     if (err) {
       res.send(err)
     } else {
-      res.send(article)
+      res.send(articles)
     }
   })
 }
