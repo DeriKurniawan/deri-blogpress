@@ -12,7 +12,7 @@ module.exports = {
     var minute = createAt.getMinutes()+1
     var hours = createAt.getHours()
     var date = createAt.getDate()
-    var month = create.getMonth()
+    var month = createAt.getMonth()
 
     new CronJob(`${second} ${minute} ${hours} ${date} ${month} *`, function(){
       console.log('You will see this every minutes');
@@ -49,7 +49,7 @@ module.exports = {
           from: '"News team 👻" <derikurniawan11d88@gmail.com>',
           to: job.to,
           subject: job.title,
-          text: job,message,
+          text: job.message,
         };
         transporter.sendMail(mailOptions, (err, info)=>{
           if(err){
