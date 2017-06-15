@@ -21,7 +21,7 @@ var users = require('./routes/users');
 var app = express();
 passport.use(new Strategy(
   function (username, password, next){
-    let User = require('./modals/user');
+    let User = require('./models/user');
     User.findOne({username: username}, (err, user)=>{
       //console.log(user);
       if (err) {

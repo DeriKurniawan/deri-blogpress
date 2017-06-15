@@ -30,7 +30,7 @@ models.signin = function(req, res, next){
     _id: user._id,
     name: user.name,
     username: user.username
-  }, 'rahasia', { expresIn: '1h' })
+  }, 'rahasia', { expiresIn: '1h' })
   let sendUser = {
     _id: user._id,
     name: user.name,

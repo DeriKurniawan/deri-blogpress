@@ -8,7 +8,10 @@ module.exports= {
         req.decoded = decoded;
         next();
       } else {
-        re.send(err);
+        res.send({
+          error: err,
+          msg: 'You are not login, please login first!!'
+        });
       }
     })
   }
