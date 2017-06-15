@@ -1,14 +1,24 @@
 <template>
   <div id="app">
     <div class="ui container">
+      <navbar></navbar>
       <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
+import Navbar from '@/components/navbar'
+
+import {mapGetters, mapGetters} from 'vuex'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Navbar
+  },
+  methods: {
+    ...mapActions([])
+  }
 }
 </script>
 
